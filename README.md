@@ -16,11 +16,11 @@ Include minlib.min.js on your page before the closing `</body>` tag
 
 ## Documentation
 
-### query() ([`Element.querySelector()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector "Element.querySelector() - MDN")) 
+### query() ([`Element.querySelector()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector "Element.querySelector() - MDN"))
 
 Function `query()` returns the first element that is a descendant of the element on which it is invoked that matches the specified group of selectors.
 
-Syntax:`query(selector, baseElement)` 
+Syntax:`query(selector, baseElement)`
 
 If a baseElement is document, you don't have to write this.
 
@@ -45,7 +45,7 @@ query('header h1');
 
 ### queryAll() ([`Element.querySelectorAll()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll "Element.querySelectorAll - MDN"))
 
-Function `queryAll()` returns a Array (not NodeList) of all elements descended from the element on which it is invoked that matches the specified group of CSS selectors. 
+Function `queryAll()` returns a Array (not NodeList) of all elements descended from the element on which it is invoked that matches the specified group of CSS selectors.
 
 
 Syntax:`queryAll(selector, baseElement)`
@@ -70,7 +70,7 @@ queryAll('h1'); // returns array with all h1 elements (baseElement is document)
 ##### example 2
 
 ```javascript
-queryAll('h1, p') // returns array with all h1 and p elements 
+queryAll('h1, p') // returns array with all h1 and p elements
 ```
 
 ##### example 3
@@ -80,17 +80,17 @@ queryAll('h1', element); // returns array with all h1 elements from element (bas
 ```
 
 ### addEvent() ([`element.addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener "element.addEventListener - MDN") )
- 
+
  Syntax: `addEvt(target,`[`type,`](https://developer.mozilla.org/en-US/docs/Web/Events "Event reference - MDN")`listener, useCapture)`
- 
- In target you can write: 
+
+ In target you can write:
 1. [Element ](https://developer.mozilla.org/en-US/docs/Web/API/element "Element - MDN") (or a function that returns an element) (example 3, example 4, example 5, example 6)
 1. String with selector (example 1)
 2. String with selectors (example 2)
 3. Array with elements (example 6)
 
 ##### example 1
- 
+
 minlib.js:
 ```javascript
 addEvt('h1', 'click', yourFunction); // sets event listener on all h1 element
@@ -99,7 +99,7 @@ addEvt('h1', 'click', yourFunction); // sets event listener on all h1 element
 ##### example 2
 
 ```javascript
-addEvent('h1, h2, p', 'click', yourFunction); // sets event listener on all h1 h2 and p element 
+addEvent('h1, h2, p', 'click', yourFunction); // sets event listener on all h1 h2 and p element
 ```
 In [vanilla.js](http://vanilla-js.com/) you have to write:
 ```javascript
@@ -111,7 +111,7 @@ document.querySelectorAll('h1, h2, p').forEach(function (element) {
 ##### example 3
 ```javascript
 addEvent(query('#row'), 'click', fuction () {
-    //code in anonymous function 
+    //code in anonymous function
 });
 ```
 
