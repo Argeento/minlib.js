@@ -133,7 +133,7 @@ addEvent(el, 'click', yourFunction);
 ```javascript
 let elOne = document.createElement('h1'),
     elTwo = document.createElement('p');
-    
+
 addEvent([elOne, elTwo], 'click', yourFunction)
 ```
 
